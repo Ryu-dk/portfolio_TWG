@@ -134,7 +134,7 @@
 }
 .Lc .line {
   position: absolute; top:30px; width: 3px; height: 190px; 
-  display:inline-block; margin-left: -10px;
+  display:inline-block; left: 0px;
   background: #ff8838;
 }
 .Lc .textbox {
@@ -241,7 +241,7 @@
     height: 484px; margin-top: 170px;
   }
   .Lc .line {
-    width: 5px; top: 67px; margin-left:0; 
+    width: 5px; top: 67px; left:30px; 
   }
   .Lc .textWrap > span {
     font-size: 2.2em; text-align: left;
