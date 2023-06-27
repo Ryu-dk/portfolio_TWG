@@ -11,53 +11,6 @@
     <script src="js/vivus.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/brand.js"></script>
-    <!-- 구글 맵 스크립트 -->
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script>
- function initialize() {
- var Y_point = 37.512996; // Y 좌표
- var X_point = 127.102732; // X 좌표
- var zoomLevel = 17; // 첫 로딩시 보일 지도의 확대 레벨
- var markerTitle = "TWG 잠실점"; // 현재 위치 마커에 마우스를 올렸을때 나타나는 이름
- var markerMaxWidth = 300; // 마커를 클릭했을때 나타나는 말풍선의 최대 크기
-
- // 말풍선 내용
- var contentString = '<div id="content">' +
- '<div id="siteNotice">' +
- '</div>' +
- '<h3 id="firstHeading" class="firstHeading">TWG tea 잠실점</h3>' +
- '<div id="bodyContent">' +
- '<p>서울특별시 송파구 잠실6동 올림픽로 300<br />' +
- 'Tel. 02) 3213-2640</p>' +
- '</div>' +
- '</div>';
-
- var myLatlng = new google.maps.LatLng(Y_point, X_point);
- var mapOptions = {
- zoom: zoomLevel,
- center: myLatlng,
- mapTypeId: google.maps.MapTypeId.ROADMAP
- }
- var map = new google.maps.Map(document.getElementById('map_view'), mapOptions);
-
- var marker = new google.maps.Marker({
- position: myLatlng,
- map: map,
- title: markerTitle
- });
-
- var infowindow = new google.maps.InfoWindow(
- {
- content: contentString,
- maxWidth: markerMaxWidth
- }
- );
-
- google.maps.event.addListener(marker, 'click', function() {
- infowindow.open(map, marker);
- });
- }
- </script>
     
     
     
@@ -90,7 +43,7 @@
             <li><a href="#"><span>How To</span></a></li>
           </ul>
         </li>
-				<li><a href="#"><span>CONTACT</span></a></li>
+	<li><a href="#"><span>CONTACT</span></a></li>
       </ul>
     </nav>
   </header>
@@ -299,9 +252,30 @@
         </g>
       </svg>
     </div>
-    <div id="map_view" class="map">
-      <!-- 좌표 37.512996, 127.102732 (Y,X) -->
-    </div>
+
+
+	<!-- * 카카오맵  -->
+	<!-- 1. 지도 노드 -->
+	<div id="daumRoughmapContainer1687831262803" class="root_daum_roughmap root_daum_roughmap_landing map"></div>
+	
+	<!--
+		2. 설치 스크립트
+		* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+	-->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	
+	<!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1687831262803",
+			"key" : "2fbq5",
+			"mapWidth" : "1560",
+			"mapHeight" : "760"
+		}).render();
+	</script>
+
+
+	  
   </div>
   <footer class="clear">
     	<div class="clear">

@@ -165,9 +165,13 @@
   position:absolute; top:-20px; right: 0;
   width: 400px; z-index: -1;
 }
-.Lc .map {
-  width: 100%; height: 275px; margin-top: 70px;
+.Lc > .map {
+  max-width: 96%; height: 275px; margin: 70px auto;
   background:#333;
+}
+
+.Lc .root_daum_roughmap .map{
+  margin:0;
 }
 
 
@@ -260,7 +264,7 @@
     top:0; right: -20%;
     width: 800px;
   }
-  .Lc .map {
+  .Lc > .map {
     width: 96%; height: 550px; margin: 170px auto 150px;
   }
 }
@@ -422,7 +426,7 @@
   .Lc .textWrap {
     bottom: 102px; left: 64%;
   }
-  .Lc .map {
+  .Lc > .map {
     height: 787px;
   }
 }
@@ -503,8 +507,11 @@
   .Lc .svg {
     right: 0; top: 90px
   }
-  .Lc .map {
-    width: 70%; margin-bottom: 110px;
+  .Lc > .map {
+    width: 70%!important;max-width:70%; margin-bottom: 110px;
+  }
+  .Lc .root_daum_roughmap .map{
+    margin:0;width:100%!important;
   }
   
 }
